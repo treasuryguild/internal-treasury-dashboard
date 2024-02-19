@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   async function getAssetsForSelectedGroups(excludedGroupNames: string[]) {
     // Fetch all group information
     const allGroupInfo = await getOrgs();
-    console.log("All group info", allGroupInfo);
+    //console.log("All group info", allGroupInfo);
     // Filter groups to exclude the ones based on the provided array of group names
     const selectedGroups = allGroupInfo.filter(group =>
       !excludedGroupNames.includes(group.group_name)
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     // Iterate over selected groups and their projects to fetch asset lists
     const assetLists = await Promise.all(selectedGroups.flatMap(group =>
       group.projects.map(async (project: any) => {
-        console.log("Project wallets", project.wallet);
+        //console.log("Project wallets", project.wallet);
         const assets = await getAssetList(project.wallet);
         return {
           groupName: group.group_name,
@@ -54,15 +54,16 @@ const Home: NextPage = () => {
     'NFT-Guild',
     ]; 
     getAssetsForSelectedGroups(excludedGroupNames).then(assetlists => {
-      console.log(assetlists);
+      //console.log(assetlists);
       setAssetLists(assetlists);
       // Optionally update your state or context with the fetched data
       // setMyVariable({ ...myVariable, assetLists });
     });
+    let unrewardedTasks = await fetchExcelData();
+    console.log("unrewarded tasks", unrewardedTasks);
   }
 
   useEffect(() => {
-    //fetchExcelData();
     getProjects();
   }, []);
 
