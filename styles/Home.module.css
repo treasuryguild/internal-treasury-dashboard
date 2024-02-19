@@ -1,0 +1,27 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.thToken, .thProject, .tdToken, .tdProject {
+  border: 1px solid #ccc; /* Light gray border */
+  padding: 8px; /* Add some padding for content */
+}
+
+.thToken {
+  text-align: right;
+  width: 150px; /* Adjust as needed */
+}
+
+.thProject {
+  text-align: left;
+  width: 200px; /* Adjust as needed */
+}
+
+.tdToken {
+  text-align: right;
+}
+
+.tdProject {
+  text-align: left;
+}

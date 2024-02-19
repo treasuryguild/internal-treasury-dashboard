@@ -17,6 +17,7 @@ interface Org {
 type MyVariable = {
   orgInfo: Org[];
   repoInfo?: any;
+  groupInfo?: any;
   // other keys go here
 };
 
@@ -32,7 +33,7 @@ interface MyVariableProviderProps {
 }
 
 export const MyVariableProvider: React.FC<MyVariableProviderProps> = ({ children }) => {
-  const [myVariable, setMyVariable] = useState<MyVariable>({ orgInfo: [], repoInfo: undefined });
+  const [myVariable, setMyVariable] = useState<MyVariable>({ orgInfo: [], repoInfo: undefined, groupInfo: undefined});
 
   return (
     <MyVariableContext.Provider value={{ myVariable, setMyVariable }}>
