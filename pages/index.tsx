@@ -46,6 +46,25 @@ const Home: NextPage = () => {
     { projectName: 'SNET Governance Workgroup', subGroups: ['Governance Workgroup'] },
     { projectName: 'The HIVE SNet', subGroups: ['Deep Funding', 'Deep Funding Town Hall', 'The Hive'] },
     { projectName: 'DF Academy', subGroups: ['Deep Funding Academy'] },
+    { projectName: 'Singularity Net Ambassador Wallet', subGroups: [
+      'Ambassador Program',
+      'Ambassador Translator',
+      'Archival Workgroup',
+      'Dework PBL',
+      'Education Guild',
+      'Experiments',
+      'Governance Workgroup',
+      'Incubation Guild',
+      'Knowledge Base WG',
+      'Marketing Guild',
+      'Process Guild',
+      'Onboarding Workgroup',
+      'R&D Guild',
+      'Strategy Guild',
+      'Treasury Guild',
+      'Video Workgroup',
+      'Writers Workgroup']
+    },
     // Add more mappings as needed
   ];
 
